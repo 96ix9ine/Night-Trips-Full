@@ -1,0 +1,247 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+    display: none;
+    width: 0;
+}
+html {
+    height: 100%;
+    width: 100%;
+}
+body {
+    height: 100%;
+    min-width: 320px;
+}
+main {
+    background-color: #011627;
+}
+.px-sm-5 {
+    padding-right: 8rem!important;
+    padding-left: 8rem!important;
+}
+/* ----------------------header---------------------- */
+.header {
+    height: 100%;
+    background-image: url("../img/header.jpeg");
+    background-position: center;
+    background-size: cover;
+    min-height: 1192px;
+    --bs-gutter-x: 0rem;
+}
+.header-item-search {
+    padding: 62px 0px 56px 56px;
+}
+.btn-lg-edit {
+    width: 167px;
+    height: 62px;
+    box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+}
+.header-item-button-text {
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: white;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.1em;
+}
+.header-item-line {
+    position: relative;
+    left: -20px;
+    width: 30px;
+    height: 2px;
+}
+.header-main {
+    color: white;
+}
+.header-heading-text {
+    font-family: 'bitter_probold';
+    text-align: center;
+    font-weight: 700;
+    font-size: 120px;
+    line-height: 153px;
+    letter-spacing: -0.02em;
+}
+.header-subheading-text {
+    font-family: 'sf_pro_displaybold';
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+.header-subsubheading-text {
+    font-family: 'sf_pro_displayregular';
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    width: 50%;
+}
+.header-scroll-text {
+    position: relative;
+    bottom: 100px;
+    left: 20px;
+    font-family: 'sf_pro_displayregular';
+    color: white;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 190%;
+    letter-spacing: 0.05em;
+    opacity: 0.9;
+    transform: rotate(-90deg);
+}
+.social-item-header {
+    padding: 10px 0 10px 0;
+}
+.underheader {
+    margin-top: 100px;
+}
+.gradientheader {
+    min-height: 315px;
+    background-image: url('../img/Gradient\ transition.png');
+}
+@media(max-width:768px) {
+    .header-item-line {
+        display: none;
+    }
+}
+/* ---------------------------------------------------- */
+/* ------------------Pick your trip-------------------- */
+.Pick-your-trip {
+    min-height: 1031px;
+    background-image: url('../img/PickYourTrip.png');
+    background-size: cover;
+}
+.pick-your-trip-h1 {
+    color: white;
+    font-family: 'bitter_probold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 110%;
+    /* or 79px */
+    text-align: center;
+    letter-spacing: -0.02em;
+}
+.pick-your-trip-ul {
+    color: white;
+    text-decoration: none;
+}
+.pick-your-trip-p {
+    color: white;
+    font-family: 'sf_pro_displayregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+    letter-spacing: -0.02em;
+}
+.desert {
+    color: white;
+    font-family: 'bitter_probold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 110%;
+    /* identical to box height, or 72px */
+    letter-spacing: -0.02em;
+}
+.subtext-desert {
+    color: white;
+    font-family: 'sf_pro_displayregular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 26px */
+    letter-spacing: -0.02em;
+}
+.subtext-desert-2 {
+    color: white;
+    font-family: 'sf_pro_displayregular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 150%;
+    /* or 26px */
+    letter-spacing: -0.02em;
+}
+.btn-lg-edit-2 {
+    width: 267px;
+    height: 65px;
+    background: #00C9E0;
+    /* Button Shadow */
+    box-shadow: 5px 15px 40px rgba(0, 201, 224, 0.2);
+    border-radius: 183px;
+}
+.desert-item-button-text {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: 'sf_pro_displayregular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 190%;
+    /* identical to box height, or 27px */
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-align: center;
+}
+.desert-item-line {
+    position: relative;
+    left: -15px;
+    top: 76px;
+}
+.share-social {
+    display: flex;
+    flex-direction: column-reverse;
+    min-width: 100px;
+}
+.share-social-text {
+    color: white;
+    font-family: 'sf_pro_displayregular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 150%;
+    /* identical to box height, or 22px */
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+.social-desert-category {
+
+}
+.social-item-desert {
+    padding: 10px 10px;
+}
+.social-desert-gimmick-line {
+    position: relative;
+    right: 121px;
+    top: 10px;
+}
+@media(max-width:768px){
+    .desert-item-line {
+        display: none;
+    }
+}
+@media(max-width:1200px) {
+    .desert-img {
+        display: none;
+    }
+}
+/* ----------------------About Us------------------------ */
+/* .About-Us {
+    background-image: url('../img/backgroundMain.png');
+    background-position: center;
+    background-size: cover;
+} */
