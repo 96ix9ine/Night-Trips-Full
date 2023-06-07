@@ -5,22 +5,21 @@
     margin: 0;
     box-sizing: border-box;
 }
-body ::-webkit-scrollbar, html ::-webkit-scrollbar {
+/* body ::-webkit-scrollbar, html ::-webkit-scrollbar {
     display: none;
     width: 0;
-}
+} */
 html {
-    height: 100%;
     width: 100%;
 }
 body {
-    height: 100%;
     min-width: 320px;
 }
 main {
-    min-height: 4309px;
+    position: relative;
+    /* min-height: 4309px; */
     background-color: #011627;
-    background-image: url('../img/Main.png');
+    background-image: url('../img/Main.webp');
     background-size: cover;
 }
 .px-sm-5 {
@@ -30,21 +29,35 @@ main {
 .gradientmain {
     position: absolute;
     min-height: 315px;
-    left: 0;
-    right: 0;
-    bottom: -3500px;
+    width: 100%;
+    top: 74%;
     background-image: url('../img/Gradient\ transition.png');
+    transform: rotate(180deg);
+}
+.navbar-toggler {
+    display: none;
+    height: 47px;
+    border: 1px solid grey;
+    border-radius: 5px;
 }
 /* ----------------------header---------------------- */
 .header {
+    position: relative;
     height: 100%;
-    background-image: url("../img/header.jpeg");
+    background-image: url("../img/header.webp");
     background-position: center;
     background-size: cover;
     min-height: 1192px;
     --bs-gutter-x: 0rem;
 }
+.header-item-logo {
+    display: flex;
+    align-items: center;
+}
 .header-item-search {
+    display: flex;
+    position: relative;
+    justify-content: center;
     padding: 62px 0px 56px 56px;
 }
 .btn-lg-edit {
@@ -96,32 +109,88 @@ main {
     line-height: 150%;
     width: 50%;
 }
+.scroll-and-line {
+    position: absolute;
+    top: 70%;
+    left: 10%;
+    height: 150px;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
 .header-scroll-text {
-    position: relative;
-    bottom: 100px;
-    left: 20px;
-    font-family: 'sf_pro_displayregular';
     color: white;
+    font-family: 'sf_pro_displayregular';
     font-weight: 700;
     font-size: 17px;
     line-height: 190%;
     letter-spacing: 0.05em;
+    text-transform: uppercase;
     opacity: 0.9;
     transform: rotate(-90deg);
+}
+.header-social {
+    position: absolute;
+    left: 86.8%;
+    top: 70%;
 }
 .social-item-header {
     padding: 10px 0 10px 0;
 }
-.underheader {
-    margin-top: 100px;
-}
 .gradientheader {
+    position: absolute;
+    width: 100%;
+    top: 75%;
     min-height: 315px;
     background-image: url('../img/Gradient\ transition.png');
 }
 @media(max-width:768px) {
     .header-item-line {
         display: none;
+    }
+}
+@media(max-width:576px) {
+    .header-menu {
+        flex-wrap: wrap;
+    }
+    .header-item-button {
+        display: flex;
+        justify-content: center;
+        flex: 1 1 auto!important;
+    }
+    .header-item-search {
+        flex: 1 1 auto!important;
+    }
+}
+@media(max-width:519px) {
+    .header-item-button {
+        padding-top: 0rem!important;
+    }
+}
+@media (max-width:448px) {
+    .header-heading-text {
+        font-size: 100px;
+        padding: 1rem!important;
+    }
+    .header-subsubheading-text {
+        width: 100%;
+    }
+    .scroll-and-line {
+        display: none!important;
+    }
+    .header-social {
+        flex-direction: row!important;
+        left: 38%;
+        top: 75%;
+    }
+    .social-item-header {
+        padding: 10px;
+    }
+}
+@media (max-width:400px) {
+    .header-social {
+        left: 31%;
+        top: 80%;
     }
 }
 /* ---------------------------------------------------- */
@@ -153,6 +222,9 @@ main {
     line-height: 150%;
     /* or 24px */
     letter-spacing: -0.02em;
+}
+.chill-adventure {
+    position: relative;
 }
 .desert {
     color: white;
@@ -209,46 +281,150 @@ main {
 .desert-item-line {
     position: relative;
     left: -15px;
-    top: 79px;
+    top: 33px;
 }
-.share-social {
+.social-desert-category {
     display: flex;
-    flex-direction: column-reverse;
-    min-width: 100px;
-}
-.share-social-text {
-    color: white;
-    font-family: 'sf_pro_displayregular';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 150%;
-    /* identical to box height, or 22px */
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
+    position: absolute;
+    width: auto;
+    left: 80%;
+    top: 100%;
 }
 .social-item-desert {
     padding: 10px 10px;
 }
 .social-desert-gimmick-line {
-    position: relative;
-    right: 121px;
-    top: 10px;
-}
-@media(max-width:768px){
-    .desert-item-line {
-        display: none;
-    }
+    position: absolute;
 }
 @media(max-width:1200px) {
     .desert-img {
         display: none;
     }
+    .chill-adventure {
+        margin: 0rem!important;
+    }
+    .chill-adventure-info {
+        padding-right: 3rem!important;
+        padding-left: 3rem!important;
+    }
+    .social-desert-category {
+        top: 70%;
+    }
+}
+@media(max-width: 992px) {
+    .social-desert-category {
+        left: 60%;
+    }
+    .pick-your-trip-svg {
+        width: 20%;
+    }
+}
+@media(max-width:768px){
+    .desert-item-line {
+        display: none;
+    }
+    .pick-your-trip-h1 {
+        font-size: 50px
+    }
+    .desert {
+        font-size: 48px;
+    }
+    .subtext-desert,
+    .subtext-desert-2 {
+        font-size: 14px;
+    }
+    .chill-adventure-button {
+        width: 205px;
+        height: 50px;
+    }
+    .desert-item-button-text {
+        font-size: 13px;
+    }
+}
+@media(max-width: 576px) {
+    .pick-your-trip-svg {
+        width: 50%;
+    }
+    .pick-your-trip-h1 {
+        font-size: 36px;
+    }
+    .pick-your-trip-p {
+        font-size: 12px;
+    }
+    .pick-your-trip-ul {
+        width: 70vw;
+        height: 13vw;
+    }
+    /* .desert {
+        font-size: 36px;
+    }
+    .subtext-desert,
+    .subtext-desert-2 {
+        font-size: 12px;
+    } */
+    .chill-adventure-button {
+        width: 140px;
+        height: 47px;
+    }
+    .desert-item-button-text {
+        font-size: 11px;
+    }
+    .social-item-desert-svg {
+        width: 18px;
+    }
+    .social-desert-gimmick-line {
+        width: 120px;
+    }
+}
+@media (max-width:500px) {
+    .social-desert-category {
+        display: none;
+    }
+    .pick-your-trip-ul {
+        width: 55vw;
+        height: 10vw;
+    }
+    .list-group-item {
+        font-size: 12px;
+    }
+    .list-group-item-4 {
+        display: none!important;
+    }
+}
+@media (max-width: 480px) {
+    .pick-your-trip-ul {
+        height: 15vw;
+    }
+}
+@media (max-width:448px) {
+    .pick-your-trip-container {
+        margin-left: 0!important;
+    }
+    .header-main {
+        margin-bottom: 0!important;
+    }
+    .chill-adventure-info {
+        padding-right: 1rem!important;
+        padding-left: 1rem!important;
+    }
+    .pick-your-trip-ul {
+        width: 70vw;
+        height: 15vw;
+        margin: 0!important;
+    }
+}
+@media (max-width:400px) {
+    .Pick-your-trip {
+        padding: 1rem!important;
+    }
+    .pick-your-trip-ul {
+        width: 85vw;
+    }
 }
 /* ----------------------About Us------------------------ */
 .about-us {
     min-height: 2982px;
-    background-image: url('../img/About\ Us.png');
+    background-image: url('../img/About-Us.webp');
     background-size: cover;
 }
 .about-us-info {
@@ -319,9 +495,54 @@ main {
     height: 100%;
     object-fit: contain; 
 }
+@media (max-width:1280px) {
+    .about-us-img img {
+        object-fit: cover;
+    }
+}
 @media(max-width:992px){
     .about-us-button-line {
         display: none;
+    }
+    .about-us-img {
+        width: calc(364px/2);
+        max-width: 100%;
+    }
+}
+@media(max-width:768px) {
+    .about-us-text {
+        font-size: 48px;
+    }
+    .about-us-subtext-bold {
+        font-size: 14px;
+    }
+    .about-us-subtext {
+        font-size: 14px;
+    }
+    .about-us-button {
+        width: 205px;
+        height: 50px;
+    }
+    .about-us-button-text {
+        font-size: 12px;
+    }
+}
+@media (max-width:620px) {
+    .about-us-sub {
+        flex-wrap: wrap;
+    }
+    .about-us-img {
+        flex: 1 1 auto!important;
+    }
+}
+@media (max-width:448px) {
+    .about-us-info {
+        margin-left: 1rem!important;
+    }
+}
+@media (max-width:510px) {
+    .about-us-img {
+        flex: 0 0 auto!important;
     }
 }
 /* -------------------------people's thoughts--------------------- */
@@ -389,6 +610,24 @@ main {
     font-size: 18px;
     line-height: 190%;
 }
+.people_s-thoughts-item-img {
+    background: url(13px.png), #28377C;
+    background-blend-mode: multiply, normal;
+    border-radius: 4px;
+}
+.people_s-thoughts-item-img-text {
+    color: white;
+    font-family: 'sf_pro_displayregular';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 170%;
+    /* or 20px */
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
 .people_s-thoughts-undertitle {
     color: white;
     font-family: 'bitter_probold';
@@ -410,6 +649,18 @@ main {
     /* or 36px */
     text-align: center;
     letter-spacing: 0.07em;
+}
+@media(max-width:1400px) {
+    .people_s-thoughts {
+        min-width: min-content;
+        min-height: min-content;
+    }
+    .people_s-thoughts-item {
+        width: auto;
+        height: auto;
+        max-width: 50%;
+        max-height: 50%;
+    }
 }
 /* --------------------------------------------------- */
 /* -----------------------footer---------------------- */
@@ -451,5 +702,36 @@ main {
     position: relative;
     margin: 0;
     padding: 0;
-
+}
+@media (max-width:992px) {
+    .footer-info {
+        flex-direction: column;
+        max-width: none;
+        margin: 0!important;
+        padding: 0!important;
+    }
+}
+@media (max-width:576px) {
+    .navbar-toggler {
+        display: block;
+        position: absolute;
+    }
+    .footer-item {
+        display: none!important;
+    }
+}
+.show {
+    display: block!important;
+}
+@media (max-width:576px) {
+    .show {
+        margin-top: 20px;
+        transform: scale(0.7);
+    }
+}
+@media (max-width:500px) {
+    .footer-item-1,
+    .footer-item-5 {
+        display: none!important;
+    }
 }
