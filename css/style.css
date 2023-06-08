@@ -31,7 +31,7 @@ main {
     min-height: 315px;
     width: 100%;
     top: 74%;
-    background-image: url('../img/Gradient\ transition.png');
+    background-image: url('../img/Gradient-transition.webp');
     transform: rotate(180deg);
 }
 .navbar-toggler {
@@ -39,6 +39,9 @@ main {
     height: 47px;
     border: 1px solid grey;
     border-radius: 5px;
+}
+.navbar-img {
+    width: 30px;
 }
 /* ----------------------header---------------------- */
 .header {
@@ -142,7 +145,7 @@ main {
     width: 100%;
     top: 75%;
     min-height: 315px;
-    background-image: url('../img/Gradient\ transition.png');
+    background-image: url('../img/Gradient-transition.webp');
 }
 @media(max-width:768px) {
     .header-item-line {
@@ -367,7 +370,7 @@ main {
         height: 47px;
     }
     .desert-item-button-text {
-        font-size: 11px;
+        font-size: 8px;
     }
     .social-item-desert-svg {
         width: 18px;
@@ -491,6 +494,7 @@ main {
     max-width: 50%;
 }
 .about-us-img img {
+    width: 385px;
     max-width: 100%;
     height: 100%;
     object-fit: contain; 
@@ -535,24 +539,29 @@ main {
         flex: 1 1 auto!important;
     }
 }
-@media (max-width:448px) {
-    .about-us-info {
-        margin-left: 1rem!important;
-    }
-}
 @media (max-width:510px) {
     .about-us-img {
         flex: 0 0 auto!important;
     }
 }
+@media (max-width:448px) {
+    .about-us-info {
+        margin-left: 1rem!important;
+    }
+}
+@media (max-width:400px) {
+    .about-us-info {
+        margin-left: 0!important;
+    }
+}
 /* -------------------------people's thoughts--------------------- */
 .people_s-thoughts {
     position: absolute;
-    min-width: 1680px;
-    min-height: 1448px;
+    min-width: min-content;
+    min-height: min-content;
     left: 20px;
     right: 20px;
-    bottom: -4000px;
+    bottom: 100px;
     background-color: #011627;
     border-radius: 10px;
 }
@@ -611,7 +620,7 @@ main {
     line-height: 190%;
 }
 .people_s-thoughts-item-img {
-    background: url(13px.png), #28377C;
+    background: #28377C;
     background-blend-mode: multiply, normal;
     border-radius: 4px;
 }
@@ -650,16 +659,89 @@ main {
     text-align: center;
     letter-spacing: 0.07em;
 }
-@media(max-width:1400px) {
-    .people_s-thoughts {
-        min-width: min-content;
-        min-height: min-content;
-    }
+@media(max-width:1440px) {
     .people_s-thoughts-item {
-        width: auto;
-        height: auto;
+        width: 50%;
+        height: 50%;
         max-width: 50%;
         max-height: 50%;
+    }
+    .people_s-thoughts-item-text {
+        font-size: 16px;
+    }
+    .people_s-thoughts-item-subtext {
+        font-size: 14px;
+    }
+    .people_s-thoughts-item-img-text {
+        font-size: 10px;
+    }
+}
+@media (max-width:992px) {
+    .people_s-thoughts-h1 {
+        font-size: 48px;
+    }
+    .people_s-thoughts-h2 {
+        font-size: 18px;
+    }
+    .people_s-thoughts-item-card {
+        width: 100%;
+        padding: 15px;
+    }
+    .people_s-thoughts-undertitle {
+        font-size: 58px;
+    }
+    .people_s-thoughts-undersubtitle {
+        font-size: 16px
+    }
+}
+@media (max-width:768px) {
+    .people_s-thoughts-item {
+        width: 100%;
+        max-width: none;
+    }
+}
+@media (max-width:620px) {
+    .people_s-thoughts {
+        padding: 1rem!important;
+    }
+}
+@media (max-width:576px) {
+    .people_s-thoughts {
+        max-width: fit-content;
+    }
+    .people_s-thoughts-h1 {
+        font-size: 36px;
+    }
+    .people_s-thoughts-h2 {
+        font-size: 12px;
+    }
+    .people_s-thoughts-undertitle {
+        font-size: 36px;
+    }
+    .people_s-thoughts-undersubtitle {
+        font-size: 14px
+    }
+}
+@media (max-width:510px) {
+    .people_s-thoughts-item-4 {
+        display: none!important;
+    }
+}
+@media (max-width:480px) {
+    .people_s-thoughts {
+        bottom: 460px;
+    }
+    .people_s-thoughts-item-3 {
+        display: none!important;
+    }
+}
+@media (max-width:410px) {
+    .people_s-thoughts {
+        padding-left: 0!important;
+        padding-right: 0!important;
+    }
+    .people_s-thoughts-item-2 {
+        display: none!important;
     }
 }
 /* --------------------------------------------------- */
